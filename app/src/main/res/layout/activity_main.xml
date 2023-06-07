@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_weight="14"
+        android:id="@+id/linear_all"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/category_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="50.0dip"
+                android:background="#FFFFFF" >
+                <TextView
+                    android:id="@+id/tv_tuijian"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="推荐"
+                    android:textColor="#579908"
+                    android:textSize="15.0dip" />
+                <TextView
+                    android:id="@+id/tv_zhouwei"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="周围"
+                    android:textColor="#000000"
+                    android:textSize="15.0dip" />
+                <TextView
+                    android:id="@+id/tv_redian"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="热点"
+                    android:textColor="#000000"
+                    android:textSize="15.0dip" />
+                <TextView
+                    android:id="@+id/tv_wode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="我的"
+                    android:textColor="#000000"
+                    android:textSize="15.0dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+
+                android:orientation="vertical" >
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/add_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_baseline_add_box_24" />
+    </RelativeLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_weight="1"
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/category_layout" />
+</LinearLayout>
